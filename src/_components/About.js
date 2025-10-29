@@ -7,20 +7,14 @@ import "swiper/css";
 const testimonials = [
   {
     id: 1,
-    text: "Working with Codeship Pvt Ltd to design and develop our eCommerce website has been an absolute game-changer for our business. Their team understood our vision perfectly and delivered a user-friendly, visually stunning platform. The site’s performance and design have significantly improved our customer engagement and sales. We couldn’t be happier with the results.Working with Codeship Pvt Ltd to design and develop our eCommerce website has been an absolute game-changer for our business. Their team understood our vision perfectly and delivered a user-friendly, visually stunning platform. The site’s performance and design have significantly improved our customer engagement and sales. We couldn’t be happier with the results.",
-    name: "CA Viswanathan",
-    role: "Founder, Virtual Auditor",
-    avatar: "/bengalore.png",
-    logo: "/casagrand.jpg",
+    text: "Working with Codeship Pvt Ltd to design and develop our eCommerce website has been an absolute game-changer for our business. Their team understood our vision perfectly and delivered a user-friendly, visually stunning platform. The site’s performance and design have significantly Working with Codeship Pvt Ltd to design and develop our eCommerce website has been an absolute game-changer for our business. Their team understood our vision perfectly and delivered a user-friendly, visually stunning platform.",
+
     art: "/chennai.png",
   },
   {
     id: 2,
-    text: "Working with Codeship Pvt Ltd to design and develop our eCommerce website has been an absolute game-changer for our business. Their team understood our vision perfectly and delivered a user-friendly, visually stunning platform. The site’s performance and design have significantly improved our customer engagement and sales. We couldn’t be happier with the results.Working with Codeship Pvt Ltd to design and develop our eCommerce website has been an absolute game-changer for our business. Their team understood our vision perfectly and delivered a user-friendly, visually stunning platform. The site’s performance and design have significantly improved our customer engagement and sales. We couldn’t be happier with the results.",
-    name: "Suyash Sharma",
-    role: "Founder, Factory Made",
-    avatar: "/chennai.png",
-    logo: "/casagrand.jpg",
+    text: "Working with Codeship Pvt Ltd to design and develop our eCommerce website has been an absolute game-changer for our business. Their team understood our vision perfectly and delivered a user-friendly, visually stunning platform. The site’s performance and design have significantly Working with Codeship Pvt Ltd to design and develop our eCommerce website has been an absolute game-changer for our business. Their team understood our vision perfectly and delivered a user-friendly, visually stunning platform. ",
+
     art: "/bengalore.png",
   },
 ];
@@ -40,7 +34,7 @@ export default function TestimonialVertical() {
             spaceBetween={20}
             slidesPerView={1}
             loop={true}
-          className="responsive-media"
+            className="responsive-media"
             onSwiper={(swiper) => {
               swiperRef.current = swiper;
             }}
@@ -69,9 +63,17 @@ export default function TestimonialVertical() {
                   <div className="col-lg-8 col-md-8 col-sm-12 col-12 order-2 order-lg-1">
                     <div className="col-12 col-md-10 col-lg-9 mx-auto">
                       <h2>Company Highlights</h2>
-                      <p className="font-bold text-muted text-justify text-lg-start mb-4">
-                        “{t.text}”
-                      </p>
+
+                      <ul className="font-bold text-muted text-justify text-lg-start mb-4">
+                        {t.text.split(". ").map(
+                          (point, index) =>
+                            point.trim() && (
+                              <li key={index} className="mb-2">
+                                {point}.
+                              </li>
+                            )
+                        )}
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -95,12 +97,7 @@ export default function TestimonialVertical() {
               className="arrow-btn d-flex align-items-center justify-content-center"
               onClick={() => swiperRef.current && swiperRef.current.slideNext()}
             >
-              <Image
-                src="/right_arrow.png"
-                alt="Next"
-                width={30}
-                height={30}
-              />
+              <Image src="/right_arrow.png" alt="Next" width={30} height={30} />
             </button>
           </div>
         </div>

@@ -25,19 +25,19 @@ export default function DevelopersCarousel() {
       image: '/appaswamy-slide.webp'
     },
     {
-      id: 3,
-      name: 'LANCOR',
-      logo: '/casagrand.jpg',
-      image: '/appaswamy-slide.webp'
-    },
-    {
-      id: 3,
-      name: 'LANCOR',
-      logo: '/casagrand.jpg',
-      image: '/appaswamy-slide.webp'
-    },
-    {
       id: 4,
+      name: 'LANCOR',
+      logo: '/casagrand.jpg',
+      image: '/appaswamy-slide.webp'
+    },
+    {
+      id: 5,
+      name: 'LANCOR',
+      logo: '/casagrand.jpg',
+      image: '/appaswamy-slide.webp'
+    },
+    {
+      id: 6,
       name: 'VGN',
       logo: '/casagrand.jpg',
       image: '/appaswamy-slide.webp'
