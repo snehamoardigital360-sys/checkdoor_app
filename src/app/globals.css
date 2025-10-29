@@ -40,3 +40,47 @@ a {
     color-scheme: dark;
   }
 }
+.testimonial-arrows {
+  z-index: 10;
+}
+
+.arrow-btn {
+  padding: 0.6rem;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.arrow-btn:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.responsive-media {
+  height: 40vh;
+  max-height: 300px;
+  min-height: 300px;
+}
+
+/* For tablets and smaller screens (<= 768px) */
+@media (min-width: 426px) and (max-width: 768px) {
+  .responsive-media {
+    height: 30vh;
+    min-height: 500px; /* 700px was too tall, adjust to suit your design */
+  }
+}
+@media(max-width: 425px) {
+  .responsive-media {
+    height: 30vh;
+    min-height: 720px; /* 700px was too tall, adjust to suit your design */
+  }
+}
+
+/* For devices between 769px and 1024px (e.g., tablets in landscape) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .responsive-media {
+    height: 35vh;
+    min-height: 450px;
+  }
+}
